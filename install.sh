@@ -157,6 +157,7 @@ elif [ "$SELECT_THEME" -eq 2 ]; then
   yarn add react-feather
   php artisan billing:install stable
   php artisan migrate
+  export NODE_OPTIONS=--openssl-legacy-provider
   yarn build:production
   php artisan view:clear
   sudo rm /root/billing.zip
