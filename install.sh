@@ -155,6 +155,7 @@ elif [ "$SELECT_THEME" -eq 2 ]; then
   npm i -g yarn
   cd /var/www/pterodactyl
   yarn add react-feather
+  export NODE_OPTIONS=--openssl-legacy-provider
   php artisan billing:install stable
   php artisan migrate
   export NODE_OPTIONS=--openssl-legacy-provider
